@@ -9,7 +9,7 @@ pragma solidity >=0.8.2 <0.9.0;
  */
 contract TradeContract {
 
-     // Определение структуры для товара
+     // Определение структуры для оффера
     struct Offer {
         string name; // Название товара
         string inn; // ИНН исполнителя
