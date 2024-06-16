@@ -43,7 +43,7 @@ contract TradeContract {
     }
 
     function deleteOffer(address _owner, uint index) public {
-        require(_owner == msg.sender, "Only owner can delete product");
+        require(_owner == msg.sender, "Only owner can delete offer");
 
         if (index >= offers[_owner].length) {
             revert("Invalid index");
@@ -53,7 +53,7 @@ contract TradeContract {
     }
 
     function completeOffer(address _seller, address _buyer, uint index) public {
-       require(_seller == offers[_buyer][index].owner, "Seller is not owner of the product");
+       require(_seller == offers[_buyer][index].owner, "Seller is not owner of the offer");
        offers[_buyer][index].completed = true;
     }
 
